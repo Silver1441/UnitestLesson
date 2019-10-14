@@ -9,10 +9,14 @@ public class Utils {
     }
 
     public BigInteger computeFactorial(long input) {
-        BigInteger result = BigInteger.valueOf(1);
-        for (long i = 1; i <= input; i++) {
-            result = result.multiply(BigInteger.valueOf(i));
+        if (input >= 0) {
+            BigInteger result = BigInteger.valueOf(1);
+            for (long i = 1; i <= input; i++) {
+                result = result.multiply(BigInteger.valueOf(i));
+            }
+            return result;
+        } else {
+            throw new ArithmeticException("negative input!");
         }
-        return result;
     }
 }
