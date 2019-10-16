@@ -4,11 +4,11 @@ import java.math.BigInteger;
 
 public class Utils {
 
-    public String concatenateWords(String firstString, String secondString) {
-        return firstString + " " + secondString;
+    public static String concatenateWords(String firstString, String secondString) {
+        return firstString.concat(secondString);
     }
 
-    public BigInteger computeFactorial(long input) {
+    public static BigInteger computeFactorial(long input) {
         if (input >= 0) {
             BigInteger result = BigInteger.valueOf(1);
             for (long i = 1; i <= input; i++) {
